@@ -1,0 +1,6 @@
+require("iforster.plugins-setup")
+require("iforster.core.options")
+require("iforster.core.keymaps")
+require("iforster.core.colorscheme")
+require("iforster.plugins.comment")
+require("iforster.plugins.nvim-tree")
