@@ -71,6 +71,8 @@ return packer.startup(function(use)
   -- managing & installing lsp servers, linters & formatters
   use("williamboman/mason.nvim") -- in charge of managing lsp servers, linters & formatters
   use("williamboman/mason-lspconfig.nvim") -- bridges gap b/w mason & lspconfig
+  use("mfussenegger/nvim-dap")
+  use("mfussenegger/nvim-jdtls")
 
   -- configuring lsp servers
   use("neovim/nvim-lspconfig") -- easily configure language servers

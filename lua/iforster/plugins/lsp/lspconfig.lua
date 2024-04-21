@@ -63,7 +63,7 @@ lspconfig["html"].setup({
 })
 
 -- configure java server
-lspconfig["java"].setup({
+lspconfig["jdtls"].setup({
   capabilities = capabilities,
   on_attach = on_attach,
 })
