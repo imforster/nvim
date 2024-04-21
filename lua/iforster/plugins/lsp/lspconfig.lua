@@ -68,7 +68,7 @@ lspconfig["java"].setup({
   on_attach = on_attach,
 })
 -- configure html server
-lspconfig["go"].setup({
+lspconfig["gopls"].setup({
   capabilities = capabilities,
   on_attach = on_attach,
 })
