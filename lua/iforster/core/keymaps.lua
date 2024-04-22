@@ -42,7 +42,7 @@ keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>") -- list open buffers
 keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>") -- list available help tags
 
 -- ToggleTerm
-keymap.set("n", "<leader>tt", "<cmd>ToggleTerm<cr>") -- list available help tags
+keymap.set("n", "<c-/>", "<cmd>ToggleTerm<cr>") -- list available help tags
 
 
 -- telescope git commands (not on youtube nvim video)
