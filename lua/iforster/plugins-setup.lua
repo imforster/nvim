@@ -125,6 +125,10 @@ return packer.startup(function(use)
     end
 }
 
+  -- These optional plugins should be loaded directly because of a bug in Packer lazy loading
+  use ('lewis6991/gitsigns.nvim') -- OPTIONAL: for git status
+  use ('romgrk/barbar.nvim')
+
 
   -- toggleterm
   use {"akinsho/toggleterm.nvim", tag = '*', config = function()
