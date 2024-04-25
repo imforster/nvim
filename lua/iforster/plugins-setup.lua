@@ -112,6 +112,20 @@ return packer.startup(function(use)
   -- git integration
   use("lewis6991/gitsigns.nvim") -- show line modifications on left hand side
 
+  -- project
+  -- Lua
+  use {
+    "ahmedkhalf/project.nvim",
+    config = function()
+      require("project_nvim").setup {
+        -- your configuration comes here
+        -- or leave it empty to use the default settings
+        -- refer to the configuration section below
+      }
+    end
+}
+
+
   -- toggleterm
   use {"akinsho/toggleterm.nvim", tag = '*', config = function()
     require("toggleterm").setup()
