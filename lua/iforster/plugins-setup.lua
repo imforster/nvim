@@ -126,9 +126,22 @@ return packer.startup(function(use)
 }
 
   -- These optional plugins should be loaded directly because of a bug in Packer lazy loading
-  use ('lewis6991/gitsigns.nvim') -- OPTIONAL: for git status
   use ('romgrk/barbar.nvim')
 
+
+  use {
+    "folke/persistence.nvim",
+    config = function()
+      event = "BufReadPre" -- this will only start session saving when an actual file was opened
+      opts = {
+        -- add any custom options here
+          dir = "~/sessions/", -- directory where session files are saved
+          options = { "buffers", "curdir", "tabpages", "winsize" }, -- sessionoptions used for saving
+          pre_save = nil, -- a function to call before saving the session
+          save_empty = false, -- don't save if there are no open file buffers   
+      }
+    end
+  }
 
   -- toggleterm
   use {"akinsho/toggleterm.nvim", tag = '*', config = function()
