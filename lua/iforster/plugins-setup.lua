@@ -129,19 +129,30 @@ return packer.startup(function(use)
   use ('romgrk/barbar.nvim')
 
 
-  use {"folke/persistence.nvim",
-    event = "BufReadPre", -- this will only start session saving when an actual file was opened
-      opts = {
-        -- add any custom options here
-        dir = vim.fn.expand(vim.fn.stdpath("state") .. "/sessions/"),
-        options = { "buffers", "curdir", "tabpages", "winsize" }, -- sessionoptions used for saving
-        pre_save = nil, -- a function to call before saving the session
-        save_empty = false, -- don't save if there are no open file buffers   
-      },
-    config = function(_, opts)
-          require'persistence'.setup(opts)
-    end
-  }
+  -- use {
+  --  "folke/persistence.nvim",
+  --  event = "BufReadPre", -- this will only start session saving when an actual file was opened
+  --    opts = {
+  --      -- add any custom options here
+  --      dir = vim.fn.expand(vim.fn.stdpath("state") .. "/sessions/"),
+  --      options = { "buffers", "curdir", "tabpages", "winsize" }, -- sessionoptions used for saving
+  --      pre_save = nil, -- a function to call before saving the session
+  --      save_empty = false, -- don't save if there are no open file buffers   
+  --    },
+  --  config = function(_, opts)
+  --        require("persistence").setup(opts)
+  --  end
+  --}
+
+  -- Lua
+use({
+  "olimorris/persisted.nvim",
+  config = function()
+    require("persisted").setup({
+          save_dir = vim.fn.expand(vim.fn.stdpath("state") .. "/sessions/"), -- Resolves to ~/.local/share/nvim/sessions/
+      })
+  end,
+})
 
   -- toggleterm
   use {"akinsho/toggleterm.nvim", tag = '*', config = function()
