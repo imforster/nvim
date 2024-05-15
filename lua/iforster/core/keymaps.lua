@@ -14,7 +14,7 @@ keymap.set("n", "<leader>-", "<C-x>") -- decrement
 
 -- window management
 keymap.set("n", "<leader>sv", "<C-w>v") -- split window vertically
-keymap.set("n", "<leader>sh", "<C-w>s") -- split window horizontally
+keymap.set("n", "<leader>sH", "<C-w>s") -- split window horizontally
 keymap.set("n", "<leader>se", "<C-w>=") -- make split windows equal width & height
 keymap.set("n", "<leader>sx", ":close<CR>") -- close current split window
 
@@ -32,7 +32,7 @@ keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>") -- toggle split window max
 
 -- nvim-tree
 keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>") -- toggle file explorer
-keymap.set("n", "<leader>s", ":NvimTreeFocus<CR>") -- toggle file explorer
+keymap.set("n", "<leader>sw", ":NvimTreeFocus<CR>") -- toggle file explorer
 
 -- telescope
 keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>") -- find files within current working directory, respects .gitignore
@@ -53,3 +53,9 @@ keymap.set("n", "<leader>gs", "<cmd>Telescope git_status<cr>") -- list current c
 
 -- restart lsp server (not on youtube nvim video)
 keymap.set("n", "<leader>rs", ":LspRestart<CR>") -- mapping to restart lsp if necessary
+
+-- Basic movement keybinds, these make navigating splits easy for me
+keymap.set("n", "<c-j>", "<c-w><c-j>")
+keymap.set("n", "<c-k>", "<c-w><c-k>")
+keymap.set("n", "<c-l>", "<c-w><c-l>")
+keymap.set("n", "<c-h>", "<c-w><c-h>")

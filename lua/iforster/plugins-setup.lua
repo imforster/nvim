@@ -84,6 +84,13 @@ return packer.startup(function(use)
   use("mfussenegger/nvim-dap")
   use("mfussenegger/nvim-jdtls")
 
+  use{
+    "lewis6991/gitsigns.nvim",
+    config = function() 
+      require('gitsigns').setup()
+    end
+  }
+
   -- configuring lsp servers
   use("neovim/nvim-lspconfig") -- easily configure language servers
   use("hrsh7th/cmp-nvim-lsp") -- for autocompletion
@@ -159,6 +166,16 @@ use({
       })
   end,
 })
+
+  -- Meandering Programming markdown preview
+  use {
+    'MeanderingProgrammer/markdown.nvim',
+    name = 'render-markdown', -- Only needed if you have another plugin named markdown.nvim
+    dependencies = { 'nvim-treesitter/nvim-treesitter' },
+    config = function()
+        require('render-markdown').setup({})
+    end,
+  }
 
   -- toggleterm
   use {"akinsho/toggleterm.nvim", tag = '*', config = function()
