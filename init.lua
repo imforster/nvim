@@ -16,3 +16,5 @@ require("iforster.plugins.treesitter")
 require("iforster.plugins.toggleterm")
 require("iforster.plugins.whichkey")
 require("iforster.plugins.lsp.lspconfig")
+
+vim.opt.clipboard="unnamed,unnamedplus"
