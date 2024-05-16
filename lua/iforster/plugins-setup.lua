@@ -84,12 +84,6 @@ return packer.startup(function(use)
   use("mfussenegger/nvim-dap")
   use("mfussenegger/nvim-jdtls")
 
-  use{
-    "lewis6991/gitsigns.nvim",
-    config = function() 
-      require('gitsigns').setup()
-    end
-  }
 
   -- configuring lsp servers
   use("neovim/nvim-lspconfig") -- easily configure language servers
