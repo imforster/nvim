@@ -12,6 +12,8 @@ keymap.set("n", "<leader>nh", ":nohl<CR>")
 keymap.set("n", "<leader>+", "<C-a>") -- increment
 keymap.set("n", "<leader>-", "<C-x>") -- decrement
 
+keymap.set("n", "<leader>mn", ":Alpha<CR>") -- decrement
+
 -- window management
 keymap.set("n", "<leader>sv", "<C-w>v") -- split window vertically
 keymap.set("n", "<leader>sH", "<C-w>s") -- split window horizontally
@@ -23,7 +25,7 @@ keymap.set("n", "<leader>tx", ":tabclose<CR>") -- close current tab
 keymap.set("n", "<leader>t+", ":tabn<CR>") --  go to next tab
 keymap.set("n", "<leader>t-", ":tabp<CR>") --  go to previous tab
 
-----------------------
+---------------------
 -- Plugin Keybinds
 ----------------------
 
