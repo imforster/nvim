@@ -265,6 +265,24 @@ require("lazy").setup({
       }
     end
   },
+  {
+    "olimorris/persisted.nvim",
+    config = function()
+      require("persisted").setup({
+         save_dir = vim.fn.expand(vim.fn.stdpath("state") .. "/sessions/"), -- Resolves to ~/.local/share/nvim/sessions/
+      })
+    end,
+  },
+  {
+    'MeanderingProgrammer/markdown.nvim',
+    name = 'render-markdown', -- Only needed if you have another plugin named markdown.nvim
+    dependencies = { 'nvim-treesitter/nvim-treesitter' },
+    config = function()
+        require('render-markdown').setup({})
+    end,
+  },
+  -- amongst your other plugins
+  {'akinsho/toggleterm.nvim', version = "*", config = true},
   ui = {
     -- If you are using a Nerd Font: set icons to an empty table which will use the
     -- default lazy.nvim defined Nerd Font icons, otherwise define a unicode icons table
@@ -284,51 +302,5 @@ require("lazy").setup({
       lazy = '💤 ',
     },
   },
-
   
-  -- toggleterm
-  --{ "akinsho/toggleterm.nvim", tag = '*', config = function()
-   --   require("toggleterm").setup()
-    --end 
-  --}, 
 })
-
---- #################
-
-  -- project
-  -- Lua
-  --use {
-  --  "ahmedkhalf/project.nvim",
-  --  config = function()
-   --   require("project_nvim").setup {
-        -- your configuration comes here
-        -- or leave it empty to use the default settings
-        -- refer to the configuration section below
-    --  }
-  --  end
---}
-
-  -- These optional plugins should be loaded directly because of a bug in Packer lazy loading
-  -- 'romgrk/barbar.nvim',
-
-
-  -- Lua
---{
- -- "olimorris/persisted.nvim",
---  config = function()
- --   require("persisted").setup({
-  --        save_dir = vim.fn.expand(vim.fn.stdpath("state") .. "/sessions/"), -- Resolves to ~/.local/share/nvim/sessions/
-   --   })
---  end,
---}
-
-  -- Meandering Programming markdown preview
- -- use {
-  --  'MeanderingProgrammer/markdown.nvim',
-  --  name = 'render-markdown', -- Only needed if you have another plugin named markdown.nvim
-  --  dependencies = { 'nvim-treesitter/nvim-treesitter' },
-  --  config = function()
-  --      require('render-markdown').setup({})
-   -- end,
-  --}
-
