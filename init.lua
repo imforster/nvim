@@ -1,18 +1,4 @@
 require("iforster.core")
 require("iforster.lazy")
---require("iforster.plugins-setup")
---require("iforster.plugins-setup")
---require("iforster.plugins.alpha")
---require("iforster.plugins.autopairs")
---require("iforster.plugins.lualine")
---require("iforster.plugins.nvim-cmp")
---require("iforster.plugins.nvim-tree")
--- require("iforster.plugins.project")
--- require("iforster.plugins.persistence")
---require("iforster.plugins.telescope")
---require("iforster.plugins.treesitter")
---require("iforster.plugins.toggleterm")
---require("iforster.plugins.whichkey")
---require("iforster.plugins.lsp.lspconfig")
 
-vim.opt.clipboard="unnamed,unnamedplus"
+vim.opt.clipboard = "unnamed,unnamedplus"
