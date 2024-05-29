@@ -1,2 +1,4 @@
+.DS_Store
 startup.log
 lua/iforster/plugins-setup.lua.bak
+lazy-lock.json
