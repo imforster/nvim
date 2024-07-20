@@ -1,11 +1,11 @@
 vim.g.mapleader = " "
-vim.g.maplocalleader = ' '
+vim.g.maplocalleader = " "
 
 local keymap = vim.keymap -- for consiceness
 
 -- general keymaps
 
-keymap.set("i", "jk", "<ESC>") 
+keymap.set("i", "jk", "<ESC>")
 
 keymap.set("n", "<leader>nh", ":nohl<CR>")
 
@@ -46,7 +46,6 @@ keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>") -- list available 
 
 -- ToggleTerm
 --keymap.set("n", "<c-/>", "<cmd>ToggleTerm<cr>") -- list available help tags
-
 
 -- telescope git commands (not on youtube nvim video)
 keymap.set("n", "<leader>gc", "<cmd>Telescope git_commits<cr>") -- list all git commits (use <cr> to checkout) ["gc" for git commits]
