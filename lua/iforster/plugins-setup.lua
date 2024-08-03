@@ -192,6 +192,8 @@ require("lazy").setup({
   "kristijanhusak/vim-dadbod-completion",
   "kristijanhusak/vim-dadbod-ui",
 
+  "nvim-lua/completion-nvim"
+
   -- autocompletion
   "hrsh7th/nvim-cmp",-- completion plugin
   "hrsh7th/cmp-buffer", -- source for text in buffer
