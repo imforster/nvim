@@ -5,7 +5,7 @@ local keymap = vim.keymap -- for consiceness
 
 -- general keymaps
 
-keymap.set("i", "jk", "<ESC>")
+keymap.set("i", "jk", "<ESC>", { desc = "Exit insert mode with jk" })
 
 keymap.set("n", "<leader>nh", ":nohl<CR>")
 
